@@ -1,8 +1,8 @@
 export default function OurPolicies() {
     return (
-        <div>
-            
-        </div>
+        <h1>
+            Our Policies
+        </h1>
     )
 }
 
