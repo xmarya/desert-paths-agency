@@ -1,4 +1,5 @@
 :root {
+  /* Ghost white  (#F3F4F6, #F4F5F9, #F5F5F7) */
   --colour-grey-0: #fff;
   --colour-grey-50: #f9fafb;
   --colour-grey-100: #f3f4f6;
@@ -11,13 +12,15 @@
   --colour-grey-800: #1f2937;
   --colour-grey-900: #111827;
 
-  --colour-main-background:#f5f4f2,
-  --colour-highlight-background:#ebeae8
+  --colour-main-background:#f5f4f2;
+  --colour-highlight-background:#ebeae8;
+
   --colour-primary-light-brown:#E8B76F;
+  --colour-primary-medium-brown:#815b15;
   --colour-primary-dark-brown:#724800;
+
   --colour-primary-text:#4E4E4E;
   --colour-secondary-text:#5d5959
-  --colour-brown-text:#815b15;
   
   --colour-accent-green: #7A9D54;
   --colour-sage-green:#9CAF88;
@@ -28,7 +31,13 @@
 
   --font-heading: "IBM Plex Sans Arabic", sans-serif;
   --font-paragraph: "Noto Naskh Arabic", serif;
-  --hero-heading: clamp(3rem, 8vw, 8rem);
+
+  --sm-radius: 0.4rem;
+  --md-radius: 0.8rem;
+  --lg-radius: 1.2rem;
+  --rounded-radius:5rem
+
+  --hero-heading: clamp(3rem, 5vw, 8rem);
   --section-heading: clamp(2.6rem, 5vw, 4rem);
   --secondary-heading: clamp(2.4rem, 5vw, 3rem);
   --p-text: clamp(1.6rem, 2.5cqi, 2rem);
@@ -41,7 +50,7 @@
   --sm-text: 1.3rem;
   --xsm-text: 1.2rem;
   
-  --check: 3px solid pink;
+  --check: 3px solid hotpink;
 }
 
 * {
@@ -67,6 +76,7 @@ body {
   background-color: var(--colour-main-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 h1,
@@ -75,12 +85,14 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-heading);
   overflow-wrap: break-word;
   hyphens: auto;
   text-wrap: balance;
 }
 
 p {
+  font-family: var(--font-paragraph);
   max-width: 60ch;
   line-height: 1.4;
   text-wrap: pretty;
