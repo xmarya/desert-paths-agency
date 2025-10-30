@@ -1,30 +1,18 @@
-import Link from "../UI/Link";
+import { NavLink } from "react-router-dom";
 import Logo from "../UI/Logo";
-import Navigation, { List, ListItem } from "../UI/Navigation";
 import StyledHeader from "../UI/StyledHeader";
+import { LanguageContext } from "../helpers/hooks/LanguageContext";
+import { useContext } from "react";
+import Navigation from "./Navigation";
+import LanguageButton from "../UI/LanguageButton";
 
 export default function Header() {
+  const {language, switchLanguage} = useContext(LanguageContext);
   return (
-    <StyledHeader>
-      <div>LANGUAGE</div>
-      <Navigation>
-        <List>
-          <ListItem>
-            <Link>تواصل معنا</Link>
-          </ListItem>
-
-          <ListItem>
-            <Link>شركاءنا</Link>
-          </ListItem>
-          <ListItem>
-            <Link>خدماتنا</Link>
-          </ListItem>
-          <ListItem>
-            <Link>من نحن؟</Link>
-          </ListItem>
-        </List>
-      </Navigation>
-      <Logo />
+    <StyledHeader id="home-top">
+      <NavLink to="/#home-top"><Logo /></NavLink>
+      <Navigation language={language} />
+      <LanguageButton language={language} switchLanguage={switchLanguage} />
     </StyledHeader>
   );
 }

@@ -1,5 +1,4 @@
 :root {
-  /* Ghost white  (#F3F4F6, #F4F5F9, #F5F5F7) */
   --colour-grey-0: #fff;
   --colour-grey-50: #f9fafb;
   --colour-grey-100: #f3f4f6;
@@ -12,22 +11,25 @@
   --colour-grey-800: #1f2937;
   --colour-grey-900: #111827;
 
-  --colour-main-background:#f5f4f2;
-  --colour-highlight-background:#ebeae8;
+  --colour-offWhite: #f8f9eb;
+  --colour-main-background: #f5f4f2;
+  --colour-highlight-background: #ebeae8;
 
-  --colour-primary-light-brown:#E8B76F;
-  --colour-primary-medium-brown:#815b15;
-  --colour-primary-dark-brown:#724800;
+  --colour-primary-light-brown: #e8b76f;
+  --colour-primary-medium-brown: #815b15;
+  --colour-primary-dark-brown: #724800;
 
-  --colour-primary-text:#4E4E4E;
-  --colour-secondary-text:#5d5959
-  
-  --colour-accent-green: #7A9D54;
-  --colour-sage-green:#9CAF88;
-  --colour-Olive-Drab-light:#A3B18A;
-  --colour-Muted-Forest:#5E7C5A;
+  --colour-primary-text: #4e4e4e;
+  --colour-secondary-text: #5d5959;
 
-  --section-vertical-space:20rem;
+  --colour-accent-light-green: #7a9d54;
+  --colour-accent-dark-green: #034f32;
+
+  --neon-red: #ff4c4c;
+
+  --section-mb: 20rem;
+  --section-subheadings-mt: 0.8rem;
+  --contents-gap: clamp(5rem, 8rem, 2rem);
 
   --font-heading: "IBM Plex Sans Arabic", sans-serif;
   --font-paragraph: "Noto Naskh Arabic", serif;
@@ -35,12 +37,13 @@
   --sm-radius: 0.4rem;
   --md-radius: 0.8rem;
   --lg-radius: 1.2rem;
-  --rounded-radius:5rem
+  --rounded-radius: 5rem;
 
-  --hero-heading: clamp(3rem, 5vw, 8rem);
+  --hero-heading: clamp(3rem, 5vw, 5rem);
+  --hero-sub-heading: clamp(1.2rem, 3cqi, 2.4rem);
   --section-heading: clamp(2.6rem, 5vw, 4rem);
-  --secondary-heading: clamp(2.4rem, 5vw, 3rem);
-  --p-text: clamp(1.6rem, 2.5cqi, 2rem);
+  --section-sub-heading: clamp(1rem, 3cqi, 2rem);
+  --p-text: clamp(1.6rem, 2.5cqi, 2.2rem);
   --button-text: clamp(1.6rem, 2.5rem, 2rem);
 
   --xxl-text: 2.2rem;
@@ -49,8 +52,26 @@
   --md-text: 1.4rem;
   --sm-text: 1.3rem;
   --xsm-text: 1.2rem;
-  
+
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --clip-path: polygon(0 20%, 100% 5%, 100% 80%, 0 100%);
+
   --check: 3px solid hotpink;
+}
+
+:root.en {
+  --main-font: "Oswald", sans-serif;
+  --secondary-font: "Oswald", sans-serif;
+  --p-text: clamp(1.4rem, 2cqi, 2rem);
+  direction: ltr !important;
+
+  p {
+    text-align: center;
+  }
+  
 }
 
 * {
@@ -65,18 +86,17 @@
 
 html {
   font-size: 62.5%;
-  scrollbar-width:thin;
+  scrollbar-width: thin;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
 
-
 body {
+  direction: rtl;
   background-color: var(--colour-main-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
 }
 
 h1,
@@ -85,6 +105,7 @@ h3,
 h4,
 h5,
 h6 {
+  text-align: center;
   font-family: var(--font-heading);
   overflow-wrap: break-word;
   hyphens: auto;
@@ -93,7 +114,8 @@ h6 {
 
 p {
   font-family: var(--font-paragraph);
-  max-width: 60ch;
+  font-size: var(--p-text);
+  max-width: 50ch;
   line-height: 1.4;
   text-wrap: pretty;
 }
@@ -104,7 +126,12 @@ a {
   cursor: pointer;
 }
 
-ul,ol {
+a:focus-visible:not(:hover) {
+  outline: 0.2rem solid var(--colour-accent-light-green);
+  outline-offset: 0.6rem;
+}
+ul,
+ol {
   display: block;
   list-style: none;
 }
@@ -120,12 +147,28 @@ img {
   height: auto;
   font-style: italic; /* for the alt */
   object-fit: cover;
+
+  border-radius: var(--sm-radius);
 }
 
+label, textarea, input {
+  font-family: var(--font-paragraph);
+}
+
+label::after {
+  content: "*";
+  color: var(--neon-red);
+  margin: 0 0.6rem;
+}
 select:disabled,
-input:disabled{
+input:disabled {
   background-color: grey;
   color: white;
-  border-color: whitesmoke
+  border-color: whitesmoke;
 }
 
+.svg {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+}

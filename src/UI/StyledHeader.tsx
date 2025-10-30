@@ -1,25 +1,28 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  position: sticky;
-  top: 1rem;
+  max-width: 100%;
+  max-height: 6rem;
+  /* position: sticky; */
+  color: var(--colour-offWhite);
+  /* top: 1rem; */
   display: flex;
   align-items: center;
   justify-content: space-around;
 
-  /* background-color: var(--colour-primary-light-brown); */
   padding-block: 1.6rem;
   margin-block: 1rem 5rem;
   margin-inline: 1.5rem; // both sides = 3rem in total
-  border: var(--check);
-  border-radius: 0;
-  border-radius: 5rem; // TODO: use motion useScroll() ? and add a smooth transition
+  border-radius: var(--sm-radius);
 
 
   backdrop-filter: blur(6px) saturate(180%);
   -webkit-backdrop-filter: blur(6px) saturate(180%);
-  background-color: rgba(232, 183, 111, 0.75);
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  background-color: hsl(from var(--colour-accent-light-green) h s l /1);
+
+  box-shadow: var(--shadow-lg);
+  z-index: 1;
+
 `;
 
 export default StyledHeader;
