@@ -1,10 +1,7 @@
 import styled from "styled-components";
-import { SectionHeading } from "../UI/Headings";
-import { List, ListItem } from "../UI/ListAndListItem";
-import { use } from "react";
-import { LanguageContext } from "../helpers/hooks/LanguageContext";
 import ArabicWhyUs from "../UI/ArabicWhyUs";
 import EnglishWhyUs from "../UI/EnglishWhyUs";
+import { List, ListItem } from "../UI/ListAndListItem";
 
 
 const Contents = styled.section`

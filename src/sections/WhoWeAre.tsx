@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { SectionHeading } from "../UI/Headings";
-import { use } from "react";
-import { LanguageContext } from "../helpers/hooks/LanguageContext";
 import dictionary from "../dictionary/dictionary";
+import { SectionHeading } from "../UI/Headings";
 
 const Contents = styled.section`
   display: flex;

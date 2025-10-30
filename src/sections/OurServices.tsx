@@ -1,11 +1,10 @@
-import styled from "styled-components";
-import { SectionHeading, SectionSubHeading } from "../UI/Headings";
-import Button from "../UI/Button";
-import services from "../data/services";
-import { use, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+import styled from "styled-components";
+import Button from "../UI/Button";
+import { SectionHeading, SectionSubHeading } from "../UI/Headings";
 import ServiceCard from "../UI/ServiceCard";
-import { LanguageContext } from "../helpers/hooks/LanguageContext";
+import services from "../data/services";
 import dictionary from "../dictionary/dictionary";
 import navigateToSection from "../helpers/navigateToSection";
 

@@ -1,5 +1,5 @@
+import { motion } from "motion/react";
 import styled from "styled-components";
-import { motion, type MotionStyle } from "motion/react";
 
 const Card = styled(motion.li)`
   container-type: inline-size;

@@ -1,12 +1,11 @@
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import BankInfo from "./BankInfo";
+import CopyButton from "./CopyButton";
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
 import Signature from "./Signature";
-import { useRef } from "react";
-import styled from "styled-components";
-import CopyButton from "./CopyButton";
-import BankInfo from "./BankInfo";
 
 export default function ArabicFooter() {
   const textRef = useRef<null | HTMLSpanElement>(null);

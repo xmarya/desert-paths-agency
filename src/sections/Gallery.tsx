@@ -1,10 +1,9 @@
+import { useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 import styled from "styled-components";
+import GalleryImages from "../UI/GalleryImages";
 import { SectionHeading, SectionSubHeading } from "../UI/Headings";
 import Section from "../UI/Section";
-import { useScroll, useTransform } from "motion/react";
-import { use, useRef } from "react";
-import GalleryImages from "../UI/GalleryImages";
-import { LanguageContext } from "../helpers/hooks/LanguageContext";
 import dictionary from "../dictionary/dictionary";
 
 const StyledGallery = styled.div`

@@ -1,13 +1,11 @@
-import styled from "styled-components";
-import { SectionHeading, SectionSubHeading } from "../UI/Headings";
-import partnerships from "../data/partnerships";
-import { IoMdPin } from "react-icons/io";
 import { BsInstagram } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
-
+import { IoMdPin } from "react-icons/io";
+import styled from "styled-components";
+import { SectionHeading } from "../UI/Headings";
+import partnerships from "../data/partnerships";
+import { FaGlobe } from "react-icons/fa6";
 import Link from "../UI/Link";
-import { use } from "react";
-import { LanguageContext } from "../helpers/hooks/LanguageContext";
 import dictionary from "../dictionary/dictionary";
 
 const Contents = styled.section`
@@ -113,6 +111,13 @@ export default function OurPartnerships({language}:{language: "ar" | "en"}) {
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.8rem" }}>
                 <h6>{name[language]}</h6>
                 <HotelLinks>
+                  {website && (
+                    <li>
+                      <Link href={website[language]} target="_blank">
+                        <FaGlobe className="svg"/>
+                      </Link>
+                    </li>
+                  )}
                   {location && (
                     <li>
                       <Link href={location} target="_blank">
