@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
+import { Link as PageLink } from "react-router-dom";
+
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import Signature from "./Signature";
 import { useRef } from "react";
@@ -50,7 +52,7 @@ export default function EnglishFooter() {
         </ContactInfo>
 
         <BusinessInfo>
-          <Link href="/en/our-policies">Our Policies</Link>
+          <PageLink to="/our-policies">Our Policies</PageLink>
           <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}}>
             <p>The Head Office: Riyadh, Saudi Arabia</p>
             <p>Ministry of Tourism license number: 73104158</p>

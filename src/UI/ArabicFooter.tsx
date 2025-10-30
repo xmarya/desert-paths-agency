@@ -5,6 +5,8 @@ import CopyButton from "./CopyButton";
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
+import { Link as PageLink } from "react-router-dom";
+
 import Signature from "./Signature";
 
 export default function ArabicFooter() {
@@ -19,7 +21,7 @@ export default function ArabicFooter() {
 
       <FooterLinks>
         <BusinessInfo>
-          <Link href="/our-policies">سياسة الحجز والإلغاء</Link>
+          <PageLink to="/our-policies">سياسة الحجز والإلغاء</PageLink>
           <div>
             <p>المركز الرئيسي: الرياض ، المملكة العربية السعودية</p>
             <p>رقم ترخيص وزار ة السياحة: 73104158</p>
