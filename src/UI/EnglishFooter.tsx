@@ -40,7 +40,7 @@ export default function EnglishFooter() {
               <p>+966558634415</p>
             </div>
           </PhoneNumbers>
-          <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
             <p>Email Addresses:</p>
             <Link target="_blank" aria-label="Email Address" href="mailto:desertpathsagency@gmail.com">
               desertpathsagency@gmail.com
@@ -52,8 +52,10 @@ export default function EnglishFooter() {
         </ContactInfo>
 
         <BusinessInfo>
-          <PageLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>Our Policies</PageLink>
-          <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}}>
+          <PageLink style={{ fontSize: "var(--md-text)" }} to="/our-policies">
+            Our Policies
+          </PageLink>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
             <p>The Head Office: Riyadh, Saudi Arabia</p>
             <p>Ministry of Tourism license number: 73104158</p>
             <p>Tax Number: 311547389200003</p>
@@ -63,13 +65,13 @@ export default function EnglishFooter() {
               <p>
                 Account Name:<span ref={textRef}>Desert Paths Agency for Travel and Tourism</span>
               </p>
-              <CopyButton copyRef={textRef} language="en"/>
+              <CopyButton copyRef={textRef} language="en" />
             </BankInfo>
             <BankInfo>
               <p>
                 Bank IBAN:<span ref={ibanRef}>SA7610000001400019612610</span>
               </p>
-              <CopyButton copyRef={ibanRef} language="en"/>
+              <CopyButton copyRef={ibanRef} language="en" />
             </BankInfo>
           </div>
         </BusinessInfo>

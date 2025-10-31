@@ -20,7 +20,9 @@ export default function ArabicFooter() {
 
       <FooterLinks>
         <BusinessInfo>
-          <PageLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>سياسة الحجز والإلغاء</PageLink>
+          <PageLink style={{ fontSize: "var(--md-text)" }} to="/our-policies">
+            سياسة الحجز والإلغاء
+          </PageLink>
           <div>
             <p>المركز الرئيسي: الرياض ، المملكة العربية السعودية</p>
             <p>رقم ترخيص وزار ة السياحة: 73104158</p>
@@ -32,13 +34,13 @@ export default function ArabicFooter() {
                 اسم الحساب البنكي:
                 <span ref={textRef}>وكالة مسارات الصحراء للسفر و السياحة</span>
               </p>
-              <CopyButton copyRef={textRef} language="ar"/>
+              <CopyButton copyRef={textRef} language="ar" />
             </BankInfo>
             <BankInfo>
               <p>
                 رقم الأيبان : <span ref={ibanRef}>SA7610000001400019612610</span>
               </p>
-              <CopyButton copyRef={ibanRef} language="ar"/>
+              <CopyButton copyRef={ibanRef} language="ar" />
             </BankInfo>
           </div>
         </BusinessInfo>
