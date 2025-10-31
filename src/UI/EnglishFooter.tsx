@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
+import { Link as PageLink } from "react-router-dom";
 
-import { useRef } from "react";
-import BankInfo from "./BankInfo";
-import CopyButton from "./CopyButton";
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import Signature from "./Signature";
+import { useRef } from "react";
+import CopyButton from "./CopyButton";
+import BankInfo from "./BankInfo";
 
 export default function EnglishFooter() {
   const textRef = useRef<null | HTMLSpanElement>(null);
@@ -51,7 +52,7 @@ export default function EnglishFooter() {
         </ContactInfo>
 
         <BusinessInfo>
-          <NavLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>Our Policies</NavLink>
+          <PageLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>Our Policies</PageLink>
           <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}}>
             <p>The Head Office: Riyadh, Saudi Arabia</p>
             <p>Ministry of Tourism license number: 73104158</p>

@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import { NavLink } from "react-router-dom";
 import BankInfo from "./BankInfo";
 import CopyButton from "./CopyButton";
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
+import { NavLink, Link as PageLink } from "react-router-dom";
 
 import Signature from "./Signature";
 
@@ -20,7 +20,7 @@ export default function ArabicFooter() {
 
       <FooterLinks>
         <BusinessInfo>
-          <NavLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>سياسة الحجز والإلغاء</NavLink>
+          <PageLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>سياسة الحجز والإلغاء</PageLink>
           <div>
             <p>المركز الرئيسي: الرياض ، المملكة العربية السعودية</p>
             <p>رقم ترخيص وزار ة السياحة: 73104158</p>
