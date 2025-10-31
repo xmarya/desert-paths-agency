@@ -5,6 +5,8 @@ import AppLayout from "./components/AppLayout";
 import { LanguageProvider } from "./helpers/hooks/LanguageContext";
 import Home from "./pages/Home";
 import OurPolicies from "./pages/OurPolicies";
+import { useEffect, useState } from "react";
+import LoadingAnimation from "./components/LoadingAnimation";
 
 // An array of Route objects with nested routes on the children property.
 const router = createBrowserRouter([
@@ -21,7 +23,24 @@ const router = createBrowserRouter([
   },
 ]);
 export default function App() {
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(()=> {
+    const animationTime = setTimeout(()=> setIsLoading(!isLoading), 4000);
+    return () => clearTimeout(animationTime);
+  }, []);
+
+  useEffect(() => {
+    if(!isLoading) {
+      const animationExitTime = setTimeout(() => setShowLoader(false), 500);
+      return () => clearTimeout(animationExitTime);
+    }
+  }, [isLoading]);
+
+  return showLoader ? (
+    <LoadingAnimation isLoading={isLoading}/>
+  ) : (
     <HelmetProvider>
       <RouterProvider router={router} />
       <Toaster
