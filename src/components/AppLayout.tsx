@@ -16,11 +16,13 @@ export default function AppLayout() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
+    if (location.hash) { // move to section
       const sectionId = location.hash.slice(1);
       const section = document.getElementById(sectionId);
       if (section) navigateToSection(sectionId);
     }
+
+    else window.scrollTo(0, 0); // move to the top when navigation between pages
   }, [location]);
 
   return (
