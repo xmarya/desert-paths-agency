@@ -5,7 +5,6 @@ import CopyButton from "./CopyButton";
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
-import { Link as PageLink } from "react-router-dom";
 
 import Signature from "./Signature";
 

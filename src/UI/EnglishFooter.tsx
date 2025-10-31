@@ -1,13 +1,12 @@
 import { NavLink } from "react-router-dom";
 import FooterLinks from "./FooterLinks";
 import Link from "./Link";
-import { Link as PageLink } from "react-router-dom";
 
+import { useRef } from "react";
+import BankInfo from "./BankInfo";
+import CopyButton from "./CopyButton";
 import { BusinessInfo, ContactInfo, Copyrights, PhoneNumbers } from "./FooterBlocks";
 import Signature from "./Signature";
-import { useRef } from "react";
-import CopyButton from "./CopyButton";
-import BankInfo from "./BankInfo";
 
 export default function EnglishFooter() {
   const textRef = useRef<null | HTMLSpanElement>(null);
