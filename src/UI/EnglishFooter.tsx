@@ -52,7 +52,7 @@ export default function EnglishFooter() {
         </ContactInfo>
 
         <BusinessInfo>
-          <PageLink to="/our-policies">Our Policies</PageLink>
+          <NavLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>Our Policies</NavLink>
           <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}}>
             <p>The Head Office: Riyadh, Saudi Arabia</p>
             <p>Ministry of Tourism license number: 73104158</p>

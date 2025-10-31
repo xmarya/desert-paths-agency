@@ -21,7 +21,7 @@ export default function ArabicFooter() {
 
       <FooterLinks>
         <BusinessInfo>
-          <PageLink to="/our-policies">سياسة الحجز والإلغاء</PageLink>
+          <NavLink style={{ fontSize: "var(--md-text)" }} to="/our-policies" reloadDocument>سياسة الحجز والإلغاء</NavLink>
           <div>
             <p>المركز الرئيسي: الرياض ، المملكة العربية السعودية</p>
             <p>رقم ترخيص وزار ة السياحة: 73104158</p>

@@ -44,10 +44,9 @@ const PartnersList = styled.ul`
     font-size: var(--md-text);
   }
 
-  @media (max-width:30em) {
+  @media (max-width: 30em) {
     // 780 / 16
     grid-template-columns: repeat(auto-fit, 15rem);
-    
   }
 `;
 
@@ -66,12 +65,12 @@ const Hotel = styled.li`
 `;
 
 const TransportationCompany = styled.div`
-grid-column: 1 / -1;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-gap: 1.6rem;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
 `;
 
 const HotelLinks = styled.ul`
@@ -91,15 +90,15 @@ const HotelLinks = styled.ul`
   }
 `;
 
-export default function OurPartnerships({language}:{language: "ar" | "en"}) {
-    const {partners:{mainHeading, paragraph, hotels, transports}} = dictionary[language];
+export default function OurPartnerships({ language }: { language: "ar" | "en" }) {
+  const {
+    partners: { mainHeading, paragraph, hotels, transports },
+  } = dictionary[language];
   return (
-    <Contents id="our-partnerships" style={{ ...(language === "en" && {direction:"ltr"})}}>
+    <Contents id="our-partnerships" style={{ ...(language === "en" && { direction: "ltr" }) }}>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <SectionHeading>{mainHeading}</SectionHeading>
-        <p style={{ alignSelf: "center", color:"var(--colour-primary-dark-brown)"}}>
-          {paragraph}
-        </p>
+        <p style={{ alignSelf: "center", color: "var(--colour-primary-dark-brown)" }}>{paragraph}</p>
       </div>
 
       <PartnersWrapper>
@@ -114,7 +113,7 @@ export default function OurPartnerships({language}:{language: "ar" | "en"}) {
                   {website && (
                     <li>
                       <Link href={website[language]} target="_blank">
-                        <FaGlobe className="svg"/>
+                        <FaGlobe className="svg" />
                       </Link>
                     </li>
                   )}
@@ -146,14 +145,16 @@ export default function OurPartnerships({language}:{language: "ar" | "en"}) {
           ))}
         </PartnersList>
 
-        <PartnersList>
-          <h5>{transports}</h5>
-          <TransportationCompany>
-            <h6>معرض صقر العروبة للسيارات</h6>
-            <h6>مؤسسة أزهري للنقليات</h6>
-            <h6>شركة فهد الغامدي للنقل</h6>
-          </TransportationCompany>
-        </PartnersList>
+        {language === "ar" && (
+          <PartnersList>
+            <h5>{transports}</h5>
+            <TransportationCompany>
+              <h6>معرض صقر العروبة للسيارات</h6>
+              <h6>مؤسسة أزهري للنقليات</h6>
+              <h6>شركة فهد الغامدي للنقل</h6>
+            </TransportationCompany>
+          </PartnersList>
+        )}
       </PartnersWrapper>
     </Contents>
   );

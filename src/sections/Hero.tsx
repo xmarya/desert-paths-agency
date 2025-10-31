@@ -51,8 +51,8 @@ export default function Hero({language}:{language: "ar" | "en"}) {
       <StyledHero ref={scrollRef} style={{margin, ...(language === "en" && {direction:"ltr"})}} layout>
         <NoiseBackground>
 
-        <video autoPlay muted loop>
-          <source src="./hero-vid-1.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline>
+          <source src="./hero-vid-1.mp4" type="video/mp4"/>
         </video>
         </NoiseBackground>
         <div
