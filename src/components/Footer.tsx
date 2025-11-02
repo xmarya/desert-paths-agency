@@ -8,7 +8,7 @@ const StyledFooter = styled.footer<{$language: "ar" | "en"}>`
   display: grid;
   backdrop-filter: blur(6px) saturate(180%);
   -webkit-backdrop-filter: blur(6px) saturate(180%);
-  background-color: hsl(from var(--colour-accent-light-green) h s l / 1);
+  background-color: var(--colour-accent-light-green);
   color: var(--colour-offWhite);
   font-family: var(--font-paragraph);
   padding: 2rem;
