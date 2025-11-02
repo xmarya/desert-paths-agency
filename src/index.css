@@ -39,7 +39,7 @@
   --lg-radius: 1.2rem;
   --rounded-radius: 5rem;
 
-  --hero-heading: clamp(3rem, 5vw, 5rem);
+  --hero-heading: clamp(2rem, 5vw, 5rem);
   --hero-sub-heading: clamp(1.2rem, 3cqi, 2.4rem);
   --section-heading: clamp(2.6rem, 5vw, 4rem);
   --section-sub-heading: clamp(1rem, 3cqi, 2rem);

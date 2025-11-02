@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
 
   backdrop-filter: blur(6px) saturate(180%);
   -webkit-backdrop-filter: blur(6px) saturate(180%);
-  background-color: hsl(from var(--colour-accent-light-green) h s l /1);
+  background-color:var(--colour-accent-light-green);
 
   box-shadow: var(--shadow-lg);
   z-index: 1;
