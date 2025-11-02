@@ -23,6 +23,10 @@ const StyledHeader = styled.header`
   box-shadow: var(--shadow-lg);
   z-index: 1;
 
+  @media (max-width: 32em) {
+      padding-inline: 2rem;
+    }
+
 `;
 
 export default StyledHeader;
